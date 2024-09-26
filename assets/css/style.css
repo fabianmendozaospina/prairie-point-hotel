@@ -10,6 +10,7 @@
     --app-secondary-color: #fff;
     --app-third-color:#000;
     --app-light-beige-color: #f8f7f6;
+    --app-banner-font-size: 48px;
     --app-header-height: 80svh;
     --app-navbar-height: 50px;
     --app-banner-height: 300px;
@@ -67,15 +68,21 @@ body{
 /*----------------------*/
 
 header {
-    background: #fff url('../img/banner.jpg') no-repeat center center;
 
     .home {
+        background: #fff url('../img/banner.jpg') no-repeat center center;
         height: var(--app-header-height);
     }
 
-    .subpage {
-        height: 14svh;
+    .about-us {
+        background: #fff url('../img/about-us.jpg') no-repeat center center;
+        height: var(--app-banner-height);
     }
+
+    .contact-us {
+        background: #fff url('../img/contact-us.jpg') no-repeat center center;
+        height: var(--app-banner-height);
+    }    
 }
 
 .navbar {
@@ -186,13 +193,23 @@ nav ul li a:hover {
     }
 }
 
+.banner {
+    height: calc(300px - 50px);
+
+    h2 {
+        color: #fff;
+        font-size: var(--app-banner-font-size);
+        font-weight: 600;
+    }
+}
+
 
 /*----------------------*/
 /* Main                 */
 /*----------------------*/
 section {
-    margin-top: var(--app-section-margin-top);
-    margin-bottom: var(--app-section-margin-bottom);
+    padding-top: var(--app-section-margin-top);
+    padding-bottom: var(--app-section-margin-bottom);
     
     h3 {
         font-size: 30px;
@@ -237,7 +254,7 @@ article {
             font-size: 26px;
             font-weight: 500;
             margin: 10px auto;
-            color: #fff;
+            color: #000;
         }
 
         p {
@@ -271,7 +288,7 @@ article {
         font-size: 16px;
         font-weight: 400;
         color: #000;
-        line-height: 2.5;
+        line-height: 1.5;
         margin-bottom: 25px;
     }
 
@@ -284,7 +301,7 @@ article {
 
         li {
             padding-left: 10px;
-            line-height: 2.5;
+            line-height: 1.5;
         }
 
         li::marker {
