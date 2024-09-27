@@ -12,7 +12,7 @@
     --app-light-beige-color: #f8f7f6;
     --app-banner-font-size: 48px;
     --app-header-height: 80svh;
-    --app-navbar-height: 50px;
+    --app-navbar-height: 80px;
     --app-banner-height: 300px;
     --app-footer-height: 60px;
     --app-footer-font-size: 16px;
@@ -21,7 +21,7 @@
 }
 
 .container {
-    width: min(100% - 32px, 1080px);
+    width: min(100% - 32px, 920px);
     margin-inline: auto;
 }
 
@@ -104,8 +104,8 @@ header {
     font-weight: 500;
 
     img {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         border-radius: 5px;
     }    
 }
@@ -118,11 +118,16 @@ nav {
             line-height: var(--app-navbar-height);
         }
     }
+
+    img {
+        display: none;
+        cursor: pointer;
+    }    
 }
 
 nav ul li a {
     color: #fff;
-    padding: 8px 16px;
+    padding: 8px 8px;
     transition: all 0.25s ease-in-out;
     text-decoration: none;
     font-weight: 300;
@@ -149,7 +154,7 @@ nav ul li a:hover {
 }
 
 .hero-banner {
-    height: calc(80svh - 50px);
+    height: calc(80svh - 80px);
     text-align: center;
 
     h3 {
@@ -160,7 +165,7 @@ nav ul li a:hover {
     }
 
     p {
-        margin-top: 30px;
+        margin-top: 10px;
         font-size: 20px;
         font-weight: 400;
         color: var(--app-secondary-color);
@@ -228,7 +233,7 @@ section {
     width: calc(50%);
 }
 
-.stay {
+.subtitle {
     margin-top: 60px;
     margin-bottom: 40px;
     text-align: center;
@@ -327,6 +332,10 @@ article {
     }
 }
 
+.our-team {
+    background-color: #efeeee;
+}
+
 .member-image img {
     max-width: 100px;
     border-radius: 50%;
@@ -355,8 +364,16 @@ article {
       margin-bottom: 10px;
       margin-right: 10px;
       text-align: left;
-  }
-  
+    }
+
+    h3 {
+        font-size: 19px;
+        font-weight: 450;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        text-align: left;
+    }
+        
     h4 {
       font-size: 16px;
       font-weight: 300;
@@ -445,13 +462,61 @@ form {
     }    
 }
 
+.row-25 {
+    flex-wrap: wrap;
+
+    img {
+        box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+    }
+}
+
+.col-25 {
+    flex: 0 0 auto;
+    width: calc(25% - 10px);
+}
+
+.facility {
+    background-color: #fff;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+}
+
+.contact-us-buttons{
+    a {
+        border-radius: 5px;
+        padding: 8px 25px;
+        font-size: 17px;
+        transition: all 0.25s ease-in-out;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .contact-primary {
+        background-color: var(--app-primary-color);
+        color: var(--app-third-color);
+        display: inline-block;
+    }
+
+    .contact-primary:hover {
+        background-color: var(--app-primary-dark-color);
+        transform: scale(1.1);
+    }  
+}
+
+.about-us-contact {
+    background-color: #fff;
+}
+
 /*-----------------------*/
 /* Footer                */
 /*-----------------------*/
 
 footer {
     height: var(--app-footer-height);
-    background-color: rgb(0 0 0 / 10%);
+    background-color: rgb(0 0 0 / 20%);
 
     ul {
         list-style: none;
@@ -500,6 +565,80 @@ footer {
 
 @media screen and (max-width: 768px) {
     .col {
+        width: 100%;
+    }
+    
+    .col-25, .box {
+        width: calc(50% - 10px);
+    }
+
+    form {
+        .text-input {
+            width: 290px
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .data {
+        width: 100%;
+    }
+
+    .hotel {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .client {
+        margin-bottom: 50px;
+    }
+
+    nav {
+        ul {
+            li {
+                display: none;
+            }
+            img {
+                display: inline;
+                height: 45px;
+                width: 60px;
+                line-height: var(--app-navbar-height);
+                padding: 8px 16px;
+            }
+        }
+    }
+
+    form {
+        .text-input {
+            width: 290px;
+        }
+    }
+
+    footer {
+        ul {
+            justify-content: center;
+            place-items: center;
+            }  
+
+        div {
+            p {
+               font-size: 11px; 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        div {
+            p {
+                font-size: 9px
+            }
+        }
+    }
+
+    .col-25, .box {
         width: 100%;
     }
 }
