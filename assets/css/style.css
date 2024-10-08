@@ -454,6 +454,7 @@ form {
         border-radius: 6px;
         background-color: #ecb13c;
         width: 200px;
+        font-weight: 600;
     }
     
     .submit:hover {
