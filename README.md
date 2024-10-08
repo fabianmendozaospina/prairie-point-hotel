@@ -1,5 +1,6 @@
 # Prairie Point Hotel
 
+![Badge](https://img.shields.io/badge/this_content-is_new!-green)
 [Prairie Point Hotel](https://fabianmendozaospina.github.io/prairie-point-hotel/) is a simple example of a learning project built in `HTML 5`, and `CSS 3`. It will later incorporate some functionalities in `JavaScript` (ECMA Script 6). This website was designed following good programming practices.
 
 ## Features
@@ -29,7 +30,9 @@ To get started locally:
    ![](./assets/img/index.jpg)
 
 7. Through the top menu, you can navegate to the other web pages, such as `About us` and `Contact us`:
+
    ![](./assets/img/aboutus.jpg)
+
    ![](./assets/img/contactus.jpg)
 
 
